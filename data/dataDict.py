@@ -53,7 +53,7 @@ Courses = {
     'CPSC_486' : ['CPSC_386','CPSC_484'],
     'CPSC_489' : ['CPSC_486'],
     'CPSC_499' : [],
-    'EGGN_495' : ['GRADUATE_STANDING']    
+    'EGGN_495' : ['SENIOR_STANDING']    
 }
 
 credit_4 = ['MATH_150A','MATH_150B','MATH_338'] 
