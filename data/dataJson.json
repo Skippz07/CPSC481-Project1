@@ -191,15 +191,15 @@
         "difficulty": "2"
       },
       "CPSC_352": {
-        "name": "Computer Forensics",
+        "name": "Cryptography",
         "units": 3,
         "prerequisites": ["CPSC_131"],
         "offered_fall": true,
-        "offered_spring": true,
+        "offered_spring": true,    
         "difficulty": "2"
       },
       "CPSC_375": {
-        "name": "Introduction to Game Design and Development",
+        "name": "Intro to Data Science and Big Data",
         "units": 3,
         "prerequisites": ["CPSC_131"],
         "offered_fall": true,
@@ -207,7 +207,7 @@
         "difficulty": "3"
       },
       "CPSC_386": {
-        "name": "Introduction to Game Design",
+        "name": "Introduction to Game Design and Production",
         "units": 3,
         "prerequisites": ["CPSC_131"],
         "offered_fall": true,
@@ -215,7 +215,7 @@
         "difficulty": "3"
       },
       "CPSC_411": {
-        "name": "Mobile Device Development",
+        "name": "Mobile Device Application Programming",
         "units": 3,
         "prerequisites": ["CPSC_131"],
         "offered_fall": true,
@@ -226,7 +226,7 @@
         "name": "Database and Applications",
         "units": 3,
         "prerequisites": ["CPSC_332"],
-        "offered_fall": true,
+        "offered_fall": false,
         "offered_spring": true,
         "difficulty": "3"
       },
@@ -234,12 +234,12 @@
         "name": "Theory of Computation",
         "units": 3,
         "prerequisites": ["CPSC_335"],
-        "offered_fall": true,
+        "offered_fall": false,
         "offered_spring": true,
         "difficulty": "3"
       },
       "CPSC_440": {
-        "name": "Computer Graphics",
+        "name": "Computer System Architecture",
         "units": 3,
         "prerequisites": ["CPSC_335"],
         "offered_fall": true,
@@ -255,18 +255,18 @@
         "difficulty": "4"
       },
       "CPSC_454": {
-        "name": "Computer and Network Security",
+        "name": "Cloud Computing and Security",
         "units": 3,
         "prerequisites": ["CPSC_471"],
         "offered_fall": true,
-        "offered_spring": true,
+        "offered_spring": false,
         "difficulty": "4"
       },
       "CPSC_455": {
-        "name": "Cryptography and Information Security",
+        "name": "Webb Security",
         "units": 3,
         "prerequisites": ["CPSC_471"],
-        "offered_fall": true,
+        "offered_fall": false,
         "offered_spring": true,
         "difficulty": "4"
       },
@@ -279,15 +279,15 @@
         "difficulty": "4"
       },
       "CPSC_458": {
-        "name": "Information Assurance and Security",
+        "name": "Malware Analysis",
         "units": 3,
         "prerequisites": ["CPSC_471"],
         "offered_fall": true,
-        "offered_spring": true,
+        "offered_spring": false,
         "difficulty": "4"
       },
       "CPSC_459": {
-        "name": "Secure System Administration",
+        "name": "Blockchain Technologies",
         "units": 3,
         "prerequisites": ["CPSC_471"],
         "offered_fall": true,
@@ -295,7 +295,7 @@
         "difficulty": "4"
       },
       "CPSC_462": {
-        "name": "Secure Software Engineering",
+        "name": "Software Design",
         "units": 3,
         "prerequisites": ["CPSC_362"],
         "offered_fall": true,
@@ -327,15 +327,15 @@
         "difficulty": "4"
       },
       "CPSC_474": {
-        "name": "Intelligent Systems",
+        "name": "Parallel and Distributed Computing",
         "units": 3,
         "prerequisites": ["CPSC_481"],
         "offered_fall": true,
-        "offered_spring": true,
+        "offered_spring": false,
         "difficulty": "4"
       },
       "CPSC_479": {
-        "name": "Machine Learning",
+        "name": "Intro to High Preformance Computing",
         "units": 3,
         "prerequisites": ["CPSC_481"],
         "offered_fall": true,
@@ -343,7 +343,7 @@
         "difficulty": "4"
       },
       "CPSC_483": {
-        "name": "Introduction to Data Science",
+        "name": "Into to Machine Learning",
         "units": 3,
         "prerequisites": ["MATH_338"],
         "offered_fall": true,
@@ -351,15 +351,15 @@
         "difficulty": "3"
       },
       "CPSC_484": {
-        "name": "Introduction to Computer Vision",
+        "name": "Principles of Computer Graphics",
         "units": 3,
         "prerequisites": ["CPSC_481"],
-        "offered_fall": true,
+        "offered_fall": false,
         "offered_spring": true,
         "difficulty": "3"
       },
       "CPSC_485": {
-        "name": "Introduction to Natural Language Processing",
+        "name": "Computational Bioinformatics",
         "units": 3,
         "prerequisites": ["CPSC_481"],
         "offered_fall": true,
@@ -367,31 +367,31 @@
         "difficulty": "3"
       },
       "CPSC_486": {
-        "name": "Introduction to Robotics",
+        "name": "Game Programming",
         "units": 3,
         "prerequisites": ["CPSC_481"],
         "offered_fall": true,
-        "offered_spring": true,
+        "offered_spring": false,
         "difficulty": "3"
       },
       "CPSC_487": {
-        "name": "Introduction to Bioinformatics",
+        "name": "Computational Epidemiology",
         "units": 3,
         "prerequisites": ["CPSC_481"],
         "offered_fall": true,
-        "offered_spring": true,
+        "offered_spring": false,
         "difficulty": "3"
       },
       "CPSC_489": {
-        "name": "Introduction to Game Development",
+        "name": "Game Development Project",
         "units": 3,
         "prerequisites": ["CPSC_386"],
-        "offered_fall": true,
+        "offered_fall": false,
         "offered_spring": true,
         "difficulty": "3"
       },
       "EGGN_495": {
-        "name": "Engineering Innovation",
+        "name": "Professional Practice (internship)",
         "units": 3,
         "prerequisites": ["Senior Standing"],
         "offered_fall": true,
