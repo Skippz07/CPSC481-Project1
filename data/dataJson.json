@@ -222,14 +222,6 @@
         "offered_spring": true,
         "difficulty": "3"
       },
-      "CPSC_411A": {
-        "name": "Mobile Device Application Programming for Android",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
       "CPSC_431": {
         "name": "Database and Applications",
         "units": 3,
@@ -271,7 +263,7 @@
         "difficulty": "4"
       },
       "CPSC_455": {
-        "name": "Webb Security",
+        "name": "Web Security",
         "units": 3,
         "prerequisites": ["CPSC_351"],
         "offered_fall": false,
@@ -385,7 +377,7 @@
       "EGGN_495": {
         "name": "Professional Practice (internship)",
         "units": 3,
-        "prerequisites": ["Senior Standing"],
+        "prerequisites": [],
         "offered_fall": true,
         "offered_spring": true,
         "difficulty": "2"
