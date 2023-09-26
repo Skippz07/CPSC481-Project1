@@ -182,14 +182,6 @@
         "offered_spring": true,
         "difficulty": "3"
       },
-     "CPSC_301": {
-        "name": "Programming Lab Practicum",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
       "CPSC_349": {
         "name": "Web Front-End Engineering",
         "units": 3,
@@ -281,7 +273,7 @@
       "CPSC_455": {
         "name": "Webb Security",
         "units": 3,
-        "prerequisites": ["CPSC_351, CPSC_353"],
+        "prerequisites": ["CPSC_351"],
         "offered_fall": false,
         "offered_spring": true,
         "difficulty": "4"
@@ -305,7 +297,7 @@
       "CPSC_459": {
         "name": "Blockchain Technologies",
         "units": 3,
-        "prerequisites": ["CPSC_351, CPSC_352, CPSC_353"],
+        "prerequisites": ["CPSC_351, CPSC_352"],
         "offered_fall": true,
         "offered_spring": true,
         "difficulty": "4"
@@ -386,14 +378,6 @@
         "name": "Game Programming",
         "units": 3,
         "prerequisites": ["CPSC_386, CPSC_484"],
-        "offered_fall": true,
-        "offered_spring": false,
-        "difficulty": "3"
-      },
-      "CPSC_489": {
-        "name": "Game Development Project",
-        "units": 3,
-        "prerequisites": ["CPSC_486"],
         "offered_fall": true,
         "offered_spring": false,
         "difficulty": "3"
