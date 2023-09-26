@@ -1,9 +1,10 @@
 import json
 
 class Course:
-    def __init__(self, course_name, units):
+    def __init__(self, course_name, units, difficulty):
         self.name = course_name
         self.units = units
+        self.difficulty = difficulty
         self.in_degree = 0
         self.prerequisites = []
         self.adj = []
@@ -12,15 +13,15 @@ class Graph:
     def __init__(self):
         self.courses = {}
 
-    def add_course(self, course_name, units):
+    def add_course(self, course_name, units, difficulty):
         # If the course is not already in the graph, add it
         if course_name not in self.courses:
-            self.courses[course_name] = Course(course_name, units)
+            self.courses[course_name] = Course(course_name, units, difficulty)
 
-    def add_prerequisite(self, course_name, prereq_name, units):
+    def add_prerequisite(self, course_name, prereq_name, units, difficulty):
         # Ensure both the course and its prerequisite are added to the graph
-        self.add_course(course_name, units)
-        self.add_course(prereq_name, units)
+        self.add_course(course_name, units, difficulty)
+        self.add_course(prereq_name, units, difficulty)
         # Update adjacency list and in_degree of the courses
         self.courses[prereq_name].adj.append(self.courses[course_name])
         self.courses[course_name].in_degree += 1
@@ -46,6 +47,7 @@ def balanced_topological_sort(graph, max_classes_per_semester, max_total_courses
     while zero_in_degree and total_courses_taken < max_total_courses:
         semester_courses = []  # List to store courses in the current semester
         next_zero_in_degree = []  # List to store courses with in_degree 0 for the next iteration
+        zero_in_degree.sort(key=lambda course: course.difficulty)
         
         # Iterate over all courses with in_degree 0
         for course in zero_in_degree:
@@ -128,9 +130,10 @@ def main():
             # Check if the course is in the filtered data and is not already taken
             if course_code in filtered_data[category]:
                 units = details.get('units', 0)
-                graph.add_course(course_code, units)  # Pass the units to add_course
+                difficulty = details.get('difficulty', 1)
+                graph.add_course(course_code, units, difficulty)  # Pass the units to add_course
                 for prereq in details['prerequisites']:
-                    graph.add_prerequisite(course_code, prereq, units)
+                    graph.add_prerequisite(course_code, prereq, units, difficulty)
 
     # Remove courses from taken_courses that are not in the graph
     taken_courses = [course_name for course_name in taken_courses if course_name in graph.courses]
