@@ -1,387 +1,376 @@
 {
-    "lower_division_core": {
-      "CPSC_120": {
-        "name": "Intro to Programming",
-        "units": 3,
-        "prerequisites": [],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "1"
-      },
-      "CPSC_121": {
-        "name": "Object-Oriented Programming",
-        "units": 3,
-        "prerequisites": ["CPSC_120"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_131": {
-        "name": "Data Structure",
-        "units": 3,
-        "prerequisites": ["CPSC_121"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_223": {
-        "name": "Advanced Programming",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "4"
-      },
-      "CPSC_240": {
-        "name": "Computer Organization and Assembly Language",
-        "units": 3,
-        "prerequisites": ["CPSC_131", "MATH_170A"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_253": {
-        "name": "Cybersecurity Foundations and Principles",
-        "units": 3,
-        "prerequisites": [],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      }
+    "CPSC_120": {
+      "name": "Intro to Programming",
+      "units": 3,
+      "prerequisites": [],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 1
     },
-    "upper_division_core": {
-      "CPSC_315": {
-        "name": "Professional Ethics in Computing",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_323": {
-        "name": "Compilers and Languages",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_332": {
-        "name": "File Structures & Database Systems",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_335": {
-        "name": "Algorithm Engineering",
-        "units": 3,
-        "prerequisites": ["CPSC_131", "MATH_170A", "MATH_150A"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_351": {
-        "name": "Operating Systems Concepts",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "1"
-      },
-      "CPSC_362": {
-        "name": "Foundations of Software Engineering",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_471": {
-        "name": "Computer Communications",
-        "units": 3,
-        "prerequisites": ["CPSC_351"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_481": {
-        "name": "Artificial Intelligence",
-        "units": 3,
-        "prerequisites": ["CPSC_335", "MATH_338"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "5"
-      },
-      "CPSC_490": {
-        "name": "Undergraduate Seminar in CS",
-        "units": 1,
-        "prerequisites": ["CPSC_362"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_491": {
-        "name": "Senior Capstone Project in CS",
-        "units": 2,
-        "prerequisites": ["CPSC_490"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      }
+    "CPSC_121": {
+      "name": "Object-Oriented Programming",
+      "units": 3,
+      "prerequisites": ["CPSC_120"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
     },
-    "math_requirements": {
-      "MATH_150A": {
-        "name": "Calculus 1",
-        "units": 4,
-        "prerequisites": [],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "1"
-      },
-      "MATH_150B": {
-        "name": "Calculus 2",
-        "units": 4,
-        "prerequisites": ["MATH_150A"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "MATH_170A": {
-        "name": "Math Structures 1",
-        "units": 3,
-        "prerequisites": [],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "1"
-      },
-      "MATH_170B": {
-        "name": "Math Structures 2",
-        "units": 3,
-        "prerequisites": ["MATH_170A"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "MATH_338": {
-        "name": "Statistics Applied to Natural Sciences",
-        "units": 4,
-        "prerequisites": ["MATH_150B"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "4"
-      }
+    "CPSC_131": {
+      "name": "Data Structure",
+      "units": 3,
+      "prerequisites": ["CPSC_121"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
     },
-    "cs_electives": {
-      "CPSC_254": {
-        "name": "Software Development with Open Source Systems",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_349": {
-        "name": "Web Front-End Engineering",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_352": {
-        "name": "Cryptography",
-        "units": 3,
-        "prerequisites": ["MATH_170B", "CPSC_131", "CPSC_253"],
-        "offered_fall": true,
-        "offered_spring": true,    
-        "difficulty": "2"
-      },
-      "CPSC_375": {
-        "name": "Intro to Data Science and Big Data",
-        "units": 3,
-        "prerequisites": ["CPSC_131", "MATH_338"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_386": {
-        "name": "Introduction to Game Design and Production",
-        "units": 3,
-        "prerequisites": ["CPSC_121"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "4"
-      },
-      "CPSC_411": {
-        "name": "Mobile Device Application Programming",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_431": {
-        "name": "Database and Applications",
-        "units": 3,
-        "prerequisites": ["CPSC_332"],
-        "offered_fall": false,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_439": {
-        "name": "Theory of Computation",
-        "units": 3,
-        "prerequisites": ["CPSC_121", "MATH_170B"],
-        "offered_fall": false,
-        "offered_spring": true,
-        "difficulty": "5"
-      },
-      "CPSC_440": {
-        "name": "Computer System Architecture",
-        "units": 3,
-        "prerequisites": ["CPSC_240"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_449": {
-        "name": "Web Back-End Engineering",
-        "units": 3,
-        "prerequisites": ["CPSC_332"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_454": {
-        "name": "Cloud Computing and Security",
-        "units": 3,
-        "prerequisites": ["CPSC_351", "CPSC_253"],
-        "offered_fall": true,
-        "offered_spring": false,
-        "difficulty": "3"
-      },
-      "CPSC_455": {
-        "name": "Web Security",
-        "units": 3,
-        "prerequisites": ["CPSC_351"],
-        "offered_fall": false,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_456": {
-        "name": "Network Security Fundamentals",
-        "units": 3,
-        "prerequisites": ["CPSC_351"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_458": {
-        "name": "Malware Analysis",
-        "units": 3,
-        "prerequisites": ["CPSC_351"],
-        "offered_fall": true,
-        "offered_spring": false,
-        "difficulty": "3"
-      },
-      "CPSC_459": {
-        "name": "Blockchain Technologies",
-        "units": 3,
-        "prerequisites": ["CPSC_351", "CPSC_352"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "4"
-      },
-      "CPSC_462": {
-        "name": "Software Design",
-        "units": 3,
-        "prerequisites": ["CPSC_362"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_463": {
-        "name": "Software Testing",
-        "units": 3,
-        "prerequisites": ["CPSC_362"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_464": {
-        "name": "Software Architecture",
-        "units": 3,
-        "prerequisites": ["CPSC_362"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "4"
-      },
-      "CPSC_466": {
-        "name": "Software Process",
-        "units": 3,
-        "prerequisites": ["CPSC_362"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "5"
-      },
-      "CPSC_474": {
-        "name": "Parallel and Distributed Computing",
-        "units": 3,
-        "prerequisites": ["CPSC_351"],
-        "offered_fall": true,
-        "offered_spring": false,
-        "difficulty": "5"
-      },
-      "CPSC_479": {
-        "name": "Intro to High Preformance Computing",
-        "units": 3,
-        "prerequisites": ["CPSC_351"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "5"
-      },
-      "CPSC_483": {
-        "name": "Intro to Machine Learning",
-        "units": 3,
-        "prerequisites": ["CPSC_335", "MATH_338"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "2"
-      },
-      "CPSC_484": {
-        "name": "Principles of Computer Graphics",
-        "units": 3,
-        "prerequisites": ["CPSC_131", "MATH_150B", "MATH_170B"],
-        "offered_fall": false,
-        "offered_spring": true,
-        "difficulty": "3"
-      },
-      "CPSC_485": {
-        "name": "Computational Bioinformatics",
-        "units": 3,
-        "prerequisites": ["CPSC_131"],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "4"
-      },
-      "CPSC_486": {
-        "name": "Game Programming",
-        "units": 3,
-        "prerequisites": ["CPSC_386", "CPSC_484"],
-        "offered_fall": true,
-        "offered_spring": false,
-        "difficulty": "5"
-      },
-      "EGGN_495": {
-        "name": "Professional Practice (internship)",
-        "units": 3,
-        "prerequisites": [],
-        "offered_fall": true,
-        "offered_spring": true,
-        "difficulty": "1"
-      }
-    }
-  }
+    "CPSC_223": {
+      "name": "Advanced Programming",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 4
+    },
+    "CPSC_240": {
+      "name": "Computer Organization and Assembly Language",
+      "units": 3,
+      "prerequisites": ["CPSC_131", "MATH_170A"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_253": {
+      "name": "Cybersecurity Foundations and Principles",
+      "units": 3,
+      "prerequisites": [],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3    
+  },
+ 
+    "CPSC_315": {
+      "name": "Professional Ethics in Computing",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_323": {
+      "name": "Compilers and Languages",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_332": {
+      "name": "File Structures & Database Systems",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_335": {
+      "name": "Algorithm Engineering",
+      "units": 3,
+      "prerequisites": ["CPSC_131", "MATH_170A", "MATH_150A"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_351": {
+      "name": "Operating Systems Concepts",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 1
+    },
+    "CPSC_362": {
+      "name": "Foundations of Software Engineering",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_471": {
+      "name": "Computer Communications",
+      "units": 3,
+      "prerequisites": ["CPSC_351"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_481": {
+      "name": "Artificial Intelligence",
+      "units": 3,
+      "prerequisites": ["CPSC_335", "MATH_338"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 5
+    },
+    "CPSC_490": {
+      "name": "Undergraduate Seminar in CS",
+      "units": 1,
+      "prerequisites": ["CPSC_362"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_491": {
+      "name": "Senior Capstone Project in CS",
+      "units": 2,
+      "prerequisites": ["CPSC_490"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    
+  },
   
+    "MATH_150A": {
+      "name": "Calculus 1",
+      "units": 4,
+      "prerequisites": [],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 1
+    },
+    "MATH_150B": {
+      "name": "Calculus 2",
+      "units": 4,
+      "prerequisites": ["MATH_150A"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "MATH_170A": {
+      "name": "Math Structures 1",
+      "units": 3,
+      "prerequisites": [],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 1
+    },
+    "MATH_170B": {
+      "name": "Math Structures 2",
+      "units": 3,
+      "prerequisites": ["MATH_170A"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "MATH_338": {
+      "name": "Statistics Applied to Natural Sciences",
+      "units": 4,
+      "prerequisites": ["MATH_150B"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 4
+    
+  },
+  
+    "CPSC_254": {
+      "name": "Software Development with Open Source Systems",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_349": {
+      "name": "Web Front-End Engineering",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_352": {
+      "name": "Cryptography",
+      "units": 3,
+      "prerequisites": ["MATH_170B", "CPSC_131", "CPSC_253"],
+      "offered_fall": true,
+      "offered_spring": true,    
+      "difficulty": 2
+    },
+    "CPSC_375": {
+      "name": "Intro to Data Science and Big Data",
+      "units": 3,
+      "prerequisites": ["CPSC_131", "MATH_338"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_386": {
+      "name": "Introduction to Game Design and Production",
+      "units": 3,
+      "prerequisites": ["CPSC_121"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 4
+    },
+    "CPSC_411": {
+      "name": "Mobile Device Application Programming",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_431": {
+      "name": "Database and Applications",
+      "units": 3,
+      "prerequisites": ["CPSC_332"],
+      "offered_fall": false,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_439": {
+      "name": "Theory of Computation",
+      "units": 3,
+      "prerequisites": ["CPSC_121", "MATH_170B"],
+      "offered_fall": false,
+      "offered_spring": true,
+      "difficulty": 5
+    },
+    "CPSC_440": {
+      "name": "Computer System Architecture",
+      "units": 3,
+      "prerequisites": ["CPSC_240"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_449": {
+      "name": "Web Back-End Engineering",
+      "units": 3,
+      "prerequisites": ["CPSC_332"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_454": {
+      "name": "Cloud Computing and Security",
+      "units": 3,
+      "prerequisites": ["CPSC_351", "CPSC_253"],
+      "offered_fall": true,
+      "offered_spring": false,
+      "difficulty": 3
+    },
+    "CPSC_455": {
+      "name": "Web Security",
+      "units": 3,
+      "prerequisites": ["CPSC_351"],
+      "offered_fall": false,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_456": {
+      "name": "Network Security Fundamentals",
+      "units": 3,
+      "prerequisites": ["CPSC_351"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_458": {
+      "name": "Malware Analysis",
+      "units": 3,
+      "prerequisites": ["CPSC_351"],
+      "offered_fall": true,
+      "offered_spring": false,
+      "difficulty": 3
+    },
+    "CPSC_459": {
+      "name": "Blockchain Technologies",
+      "units": 3,
+      "prerequisites": ["CPSC_351", "CPSC_352"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 4
+    },
+    "CPSC_462": {
+      "name": "Software Design",
+      "units": 3,
+      "prerequisites": ["CPSC_362"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_463": {
+      "name": "Software Testing",
+      "units": 3,
+      "prerequisites": ["CPSC_362"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_464": {
+      "name": "Software Architecture",
+      "units": 3,
+      "prerequisites": ["CPSC_362"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 4
+    },
+    "CPSC_466": {
+      "name": "Software Process",
+      "units": 3,
+      "prerequisites": ["CPSC_362"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 5
+    },
+    "CPSC_474": {
+      "name": "Parallel and Distributed Computing",
+      "units": 3,
+      "prerequisites": ["CPSC_351"],
+      "offered_fall": true,
+      "offered_spring": false,
+      "difficulty": 5
+    },
+    "CPSC_479": {
+      "name": "Intro to High Preformance Computing",
+      "units": 3,
+      "prerequisites": ["CPSC_351"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 5
+    },
+    "CPSC_483": {
+      "name": "Intro to Machine Learning",
+      "units": 3,
+      "prerequisites": ["CPSC_335", "MATH_338"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 2
+    },
+    "CPSC_484": {
+      "name": "Principles of Computer Graphics",
+      "units": 3,
+      "prerequisites": ["CPSC_131", "MATH_150B", "MATH_170B"],
+      "offered_fall": false,
+      "offered_spring": true,
+      "difficulty": 3
+    },
+    "CPSC_485": {
+      "name": "Computational Bioinformatics",
+      "units": 3,
+      "prerequisites": ["CPSC_131"],
+      "offered_fall": true,
+      "offered_spring": true,
+      "difficulty": 4
+    },
+    "CPSC_486": {
+      "name": "Game Programming",
+      "units": 3,
+      "prerequisites": ["CPSC_386", "CPSC_484"],
+      "offered_fall": true,
+      "offered_spring": false,
+      "difficulty": 5
+    }
+  
+}
