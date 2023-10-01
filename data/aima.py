@@ -27,7 +27,7 @@ class State:
         return self.difficulty < other.difficulty
 
     def successors(self, available_courses):
-        if self.semester % 2 != 0:            
+        if self.semester % 2 != 0:
         # For parent state in odd semesters (e.g., Fall), consider courses offered for successors in Spring
             eligible_courses = [course for course in available_courses if
                                 course not in self.courses_taken and course.course_code not in completed_courses and
@@ -161,8 +161,10 @@ initial_state = State(completed_courses, total_units_taken, 0, 0, None)
 graduation_plan = astar_search(initial_state, total_units_required)
 
 if graduation_plan:
-    print("Graduation Plan: ")
-    for course in graduation_plan:
-        print(course.courses_taken)
+    print("Graduation Plan:", type(graduation_plan))
+    counter = 1
+    for course in reversed(graduation_plan):
+        print('Semester %i: %s' % (counter, course.courses_taken))
+        counter += 1
 else:
     print("No valid graduation plan found within the specified depth limit.")
