@@ -59,6 +59,10 @@ class State:
  
         else:
             for course in eligible_courses:
+                if course.name == "EGGN_495":
+                    if new_total_units_taken >= 90 and current_units <= 14:
+                        continue
+                        
                 if course.course_code not in completed_courses and all(prereq in completed_courses for prereq in course.prerequisites):
                     current_units += course.units
                     if(current_units <= 17 and (course.course_code not in completed_courses) and (new_total_units_taken  + course.units <= 120)):                        
@@ -105,6 +109,7 @@ def astar_search(initial_state, total_units_required):
 # Load the JSON data and create Course objects
 with open('dataJson.json', 'r') as file:
     data = json.load(file)
+original_data = data
 available_courses = []
     
 # for course_code, details in data.items():
@@ -117,9 +122,6 @@ taken_courses_input = input("Enter the courses you have already taken separated 
 taken_courses = [course.strip() for course in taken_courses_input.split(",")] if taken_courses_input else []
 
 total_units_taken = 0
-for course_code, details in data.items():
-    if course_code in taken_courses:
-        total_units_taken += details['units']
         
 def remove_taken_courses(courses_data, courses_to_remove, total_units_taken):
     updated_courses = courses_data.copy()
@@ -138,11 +140,14 @@ while True:
     if filtered_data == data:
         break
     data = filtered_data
+
     
-for course_code, details in data.items():
+for course_code, details in original_data.items():
     if course_code in filtered_data:
         course = Course(course_code, details["name"], details["units"], details["prerequisites"], details["difficulty"],0, details["offered_fall"], details["offered_spring"])
         available_courses.append(course)
+    else:
+        total_units_taken += details['units']
 
 total_units_required = 120 - total_units_taken # Adjust this value based on your program's requirements
 
