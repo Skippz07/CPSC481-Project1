@@ -59,12 +59,11 @@ class State:
  
         else:
             for course in eligible_courses:
-                if course.course_code not in self.courses_taken and (course.course_code not in completed_courses) and all(prereq in completed_courses for prereq in course.prerequisites):
+                if course.course_code not in completed_courses and all(prereq in completed_courses for prereq in course.prerequisites):
                     current_units += course.units
                     if(current_units <= 17 and (course.course_code not in completed_courses) and (new_total_units_taken  + course.units <= 120)):                        
                         new_courses_taken += [course.course_code]
                         new_total_units_taken = new_total_units_taken + course.units
-                        print("total units : ", new_total_units_taken)
                         completed_courses.append(course.course_code)
                         total_difficulty += course.difficulty
             next_states.append(State(new_courses_taken, new_total_units_taken, self.semester + 1, total_difficulty, self))
@@ -79,15 +78,13 @@ def astar_search(initial_state, total_units_required):
     while True:
                 
         _, current_state = heapq.heappop(open_set)
-
-        if current_state.is_goal(total_units_required):
-            print("it's goal")
-            print("----------------")
-            while(current_state.parent.semester != 1):   
-                current_state = current_state.parent             
-                print(current_state.parent.courses_taken)
-            print("-------------")
-            return current_state.courses_taken
+        final_plan =[]
+        if current_state.is_goal(total_units_required):            
+            while(current_state.parent.semester >= 1):  
+                final_plan.append(current_state) 
+                current_state = current_state.parent
+            final_plan.append(current_state)
+            return final_plan
 
         if current_state in closed_set:
             continue
@@ -98,55 +95,69 @@ def astar_search(initial_state, total_units_required):
             g_n = 1
             h_n = next_state.difficulty
             f_n = g_n + h_n
-            #printNextState(next_state, g_n, h_n)
             if next_state.courses_taken[-1] not in already_added_courses:
                 heapq.heappush(open_set, (f_n, next_state))
                 already_added_courses.add(next_state.courses_taken[-1])
 
     return None
 
-def printNextState(state, path_cost, heuristic):
-    print("semester : ", state.semester)
-    print("--------------------------")
-    for course in state.courses_taken:
-        print(course)
-    print("path cost : ", path_cost)
-    print("heuristic : ", heuristic)
-    print("--------------------------")
-    
-def printEligible(courses):
-    for course in courses:
-        print(course.course_code)
-        
-def printCompleted(courses):
-    for course in courses:
-        print(course)
 
 # Load the JSON data and create Course objects
 with open('dataJson.json', 'r') as file:
     data = json.load(file)
-
 available_courses = []
+    
+# for course_code, details in data.items():
+#     course = Course(course_code, details["name"], details["units"], details["prerequisites"], details["difficulty"],0, details["offered_fall"], details["offered_spring"])
+#     available_courses.append(course)
 
+
+    
+taken_courses_input = input("Enter the courses you have already taken separated by commas (e.g. CPSC_120, MATH_150A), or press Enter if you haven't taken any: ").strip()
+taken_courses = [course.strip() for course in taken_courses_input.split(",")] if taken_courses_input else []
+
+total_units_taken = 0
 for course_code, details in data.items():
-    course = Course(course_code, details["name"], details["units"], details["prerequisites"], details["difficulty"],0, details["offered_fall"], details["offered_spring"])
-    available_courses.append(course)
+    if course_code in taken_courses:
+        total_units_taken += details['units']
+        
+def remove_taken_courses(courses_data, courses_to_remove, total_units_taken):
+    updated_courses = courses_data.copy()
+    for course_code in courses_to_remove.copy():
+        if course_code in updated_courses:
+            course_details = updated_courses[course_code]
+            del updated_courses[course_code]
+            courses_to_remove.extend(course_details['prerequisites'])
+    return updated_courses
 
-# Input: List of completed courses (e.g., ["MATH_150A", "CPSC_120"])
-completed_courses = []  # You can populate this list with courses already taken
 
-# Calculate the total units required for graduation
-total_units_required = 120  # Adjust this value based on your program's requirements
 
+# Recursively remove taken courses and their prerequisites
+while True:
+    filtered_data = remove_taken_courses(data, taken_courses, total_units_taken)
+    if filtered_data == data:
+        break
+    data = filtered_data
+    
+for course_code, details in data.items():
+    if course_code in filtered_data:
+        course = Course(course_code, details["name"], details["units"], details["prerequisites"], details["difficulty"],0, details["offered_fall"], details["offered_spring"])
+        available_courses.append(course)
+
+total_units_required = 120 - total_units_taken # Adjust this value based on your program's requirements
+
+print("total units required")
+print(total_units_required)
 # Create an initial state based on completed courses
-initial_state = State(completed_courses, sum(course.units for course in completed_courses), 0, 0, None)
+completed_courses = taken_courses
+initial_state = State(completed_courses, total_units_taken, 0, 0, None)
 
 # Perform A* search to create a plan for graduation
 graduation_plan = astar_search(initial_state, total_units_required)
 
 if graduation_plan:
-    print("Graduation Plan:", type(graduation_plan))
+    print("Graduation Plan: ")
     for course in graduation_plan:
-        print(course)
+        print(course.courses_taken)
 else:
     print("No valid graduation plan found within the specified depth limit.")
